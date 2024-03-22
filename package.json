@@ -8,7 +8,7 @@
     "run": "node index.js",
     "update": "cd website && npm run build",
     "start": "npm run update && npm run run",
-    "dev": "nodemon -i ./dist --exec 'npm run start'"
+    "dev": "nodemon --delay 2.5s -i ./dist --exec 'npm run start'"
   },
   "dependencies": {
     "connect-history-api-fallback": "^2.0.0",
