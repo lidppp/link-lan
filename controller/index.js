@@ -1,15 +1,31 @@
 import Express from "express"
+import {runSql, sqlGet} from "../utils/sql.js";
+import ResultMessage from "../utils/resultMessage.js";
 const router = Express.Router()
 
 router.route("/api/message")
     .get((req, res)=>{
-      res.send("message get")
+      sqlGet(`SELECT id,msg,create_time FROM message`).then((sqlRes)=>{
+        res.send(ResultMessage.success(sqlRes))
+      }).catch(err=>{
+        res.send(ResultMessage.error(err.message))
+      })
     })
     .post((req,res)=>{
-      res.send("message post")
+      const msg = req.body.msg;
+      runSql("INSERT INTO message (msg, create_time) values (?, ?)", [msg, +new Date()]).then(sqlRes=>{
+        res.send(ResultMessage.success())
+      }).catch(err=>{
+        res.send(ResultMessage.error(err.message))
+      })
     })
     .delete((req, res)=>{
-      res.send("message delete")
+      const id = req.body.id;
+      runSql("DELETE FROM message WHERE id=?", [id]).then(sqlRes=>{
+        res.send(ResultMessage.success())
+      }).catch(err=>{
+        res.send(ResultMessage.error(err.message))
+      })
     })
 
 router.route("/api/file")

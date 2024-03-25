@@ -11,14 +11,26 @@
     "dev": "nodemon --delay 2.5s -i ./dist --exec 'npm run start'"
   },
   "dependencies": {
+    "@unocss/reset": "^0.58.6",
+    "@vant/touch-emulator": "^1.4.0",
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
     "connect-history-api-fallback": "^2.0.0",
     "express": "^4.19.1",
     "sqlite3": "^5.1.7",
-    "vue": "^3.4.21"
+    "vant": "^4.8.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@unocss/transformer-directives": "^0.58.6",
+    "@vant/auto-import-resolver": "^1.1.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "nodemon": "^3.1.0",
+    "sass": "^1.72.0",
+    "unocss": "^0.58.6",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
     "vite": "^5.2.0"
   },
   "bin": {
