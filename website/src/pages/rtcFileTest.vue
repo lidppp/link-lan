@@ -10,21 +10,21 @@
     <div>
       <input type="file" ref="file" @change="fileChange">
     </div>
-    
+
     <div v-for="(item, index) in ids">
       <div :class="{my: myPeerId === item.peerId, link: linkId===item.peerId}"
            @click="link(item, mySocketId === index || linkId===item.peerId)">
         {{ index }} : &nbsp;&nbsp;{{ item.peerId }}
       </div>
     </div>
-    
+
     <div>
       对方文件
       <div v-for="(item,index) in otherFiles" @click="get_file(index)">
         {{ item.name }} / {{ readableBytes(item.size) }}
       </div>
     </div>
-    
+
     <div>
       我的文件
       <div v-for="item in files">
@@ -66,20 +66,20 @@ const fileChange = (e) => {
       }
     })))
   }
-  
+
 }
 
 function readableBytes(bytes) {
   if (bytes === 0) return '0 B'
   const i = Math.floor(Math.log(bytes) / Math.log(1024))
   const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-  
+
   return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`
 }
 
 
 //与后台服务器的WebSocket连接
-const socket = io("ws://" + location.hostname + ":3000");
+const socket = io("ws://" + location.host);
 socket.on("connect", () => {
   console.log("socket id : " + socket.id)
   mySocketId.value = socket.id
@@ -114,24 +114,24 @@ const link = (item, flag) => {
 
 function bufToFile(buf, filename) {
   const file = new File([buf], filename);
-  
+
   function download(downloadFile) {
     const tmpLink = document.createElement("a");
     const objectUrl = URL.createObjectURL(downloadFile);
-    
+
     tmpLink.href = objectUrl;
     tmpLink.download = downloadFile.name;
     // TODO 添加a标签样式 不然页面会抖动
     document.body.appendChild(tmpLink);
     tmpLink.click();
-    
+
     document.body.removeChild(tmpLink);
     URL.revokeObjectURL(objectUrl);
   }
-  
+
   download(file);
   close()
-  
+
 }
 
 const createCoon = (_conn, cb = () => {
@@ -145,7 +145,7 @@ const createCoon = (_conn, cb = () => {
       console.log('Received', data);
       bufToFile(data, getFileMessage.value.name);
     });
-    
+
     conn.value.on("close", function (data) {
       close()
     })
