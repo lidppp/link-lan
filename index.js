@@ -3,12 +3,15 @@ import path from "node:path";
 import {fileURLToPath} from 'url';
 import history from "connect-history-api-fallback"
 import bodyParser from "body-parser"
+import {createServer} from "http";
 
 import "./utils/sql.js"
 import {getIp} from "./utils/ip.js"
 import {getPort} from "./utils/port.js"
 
 import router from "./controller/index.js"
+import {Server} from "socket.io";
+import createIO from "./socket.js";
 
 const ip = getIp()
 const port = await getPort(3000)
@@ -30,7 +33,10 @@ app.use(history());
 app.get(/.*/, function (req, res) {
   res.sendFile(path.join(__dirname, './dist/index.html'))
 })
-
-app.listen(port, "0.0.0.0", () => {
+const httpServer = createServer(app);
+createIO(httpServer)
+httpServer.listen(port, "0.0.0.0", () => {
   console.log(`run in http://${ip}:${port}`)
+  console.log(`ws://${ip}:${port}`)
 })
+
