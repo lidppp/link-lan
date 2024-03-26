@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import '@vant/touch-emulator';
 import '@unocss/reset/tailwind.css'
 import './style.css'
+import 'vant/es/notify/style';
 import 'virtual:uno.css'
 import App from './App.vue'
 import router from "@/router/index.js";

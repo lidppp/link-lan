@@ -10,7 +10,7 @@ import {getIp} from "./utils/ip.js"
 import {getPort} from "./utils/port.js"
 
 import router from "./controller/index.js"
-import {Server} from "socket.io";
+
 import createIO from "./socket.js";
 
 const ip = getIp()

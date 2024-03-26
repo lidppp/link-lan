@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { showNotify } from 'vant';
-import 'vant/es/notify/style';
+
 // 创建一个实例，此后都在此实例上改造
 const http = axios.create({
   timeout: 10000,
