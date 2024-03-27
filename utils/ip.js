@@ -9,6 +9,6 @@ export function getIp() {
 
   const ip = ips.filter((item) => {
     return item.family === "IPv4" && item.address !== "127.0.0.1" && !item.internal
-  })[0].address
+  })[0]?.address || "127.0.0.1"
   return ip
 }

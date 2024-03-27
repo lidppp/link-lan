@@ -5,7 +5,7 @@
     </div>
 
     <div class="flex items-center gap-10px pt15px pb30px sticky top-0 bg-white z1 rounded-16px">
-      <input type="text" class="border-b px-15px lh-34px flex-grow" placeholder="Input Transfer text" v-model="msg">
+      <input type="text" class="border-b px-15px lh-34px flex-grow" placeholder="Input Transfer text" v-model="msg" @keyup.enter="add">
       <van-icon class="px10px hover:text-green transition-all-300 cursor-pointer" size="22" name="add-o" @click="add"/>
       <van-icon class="px10px hover:text-blue transition-all-300 cursor-pointer" size="20" name="replay"
                 @click="reload"/>
