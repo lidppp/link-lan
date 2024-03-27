@@ -10,3 +10,9 @@ html,body, #app{
     background: black;
     color: white;
 }
+
+.tempDownLink{
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}

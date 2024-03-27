@@ -1,7 +1,7 @@
 <template>
   <div class="pb30px">
     <div class="title">
-      Transfer text
+      Transfer Text
     </div>
 
     <div class="flex items-center gap-10px pt15px pb30px sticky top-0 bg-white z1 rounded-16px">
@@ -23,6 +23,11 @@
         </div>
       </div>
     </template>
+    
+    <div class="sticky bottom-0 p20px bg-#fff flex items-center justify-end text-#777 hover:text-black active:text-black transition-all-300 rounded-16px">
+      <router-link to="/file">Go To Transfer File<van-icon class="rotate--90deg ml-10px" name="down" /></router-link>
+      
+    </div>
 
   </div>
 </template>
@@ -48,8 +53,16 @@ const reload = () => {
   getList()
 }
 const add = () => {
+  if (!msg.value){
+    return
+  }
   addMessage({msg: msg.value}).then(res => {
     reload()
+    msg.value = ""
+    showNotify({
+      message: "Send Success",
+      type: "success"
+    })
   })
 }
 

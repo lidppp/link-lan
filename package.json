@@ -8,9 +8,10 @@
     "run": "node index.js",
     "update": "cd website && npm run build",
     "start": "npm run update && npm run run",
-    "dev": "nodemon --delay 2.5s -i ./dist --exec 'npm run start'"
+    "dev": "nodemon --delay 2.5s --exec 'npm run start'"
   },
   "dependencies": {
+    "@multiavatar/multiavatar": "^1.0.7",
     "@unocss/reset": "^0.58.6",
     "@vant/touch-emulator": "^1.4.0",
     "axios": "^1.6.8",
@@ -18,6 +19,7 @@
     "connect-history-api-fallback": "^2.0.0",
     "copy-to-clipboard": "^3.3.3",
     "express": "^4.19.1",
+    "peer": "^1.0.2",
     "peerjs": "^1.5.2",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
@@ -39,5 +41,8 @@
   },
   "bin": {
     "lit": "run.js"
+  },
+  "nodemonConfig": {
+    "ignore": ["dist/*", "data/*", "data/*", "node_modules/*"]
   }
 }

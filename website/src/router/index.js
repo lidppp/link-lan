@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
   { path: '/', component: Message },
+  { path: '/file', component: ()=>import("@/pages/rtcFile.vue") },
   { path: '/:pathMatch(.*)*', redirect:"/" },
 ]
 
