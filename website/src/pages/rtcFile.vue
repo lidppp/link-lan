@@ -122,6 +122,10 @@ const getFile = (index) => {
   }
   getFileMessage.value = openFilesData.value.files[index]
   socket.emit("getFile", JSON.stringify({index, peerId: openFilesData.value.peerId, reqPeerId: myPeerId.value}))
+  showNotify({
+    type: "success",
+    message: "Downloading"
+  })
 }
 
 //与后台服务器的WebSocket连接
@@ -179,7 +183,7 @@ const createCoon = (_conn, cb = () => {
       downloadFile(data, getFileMessage.value.name, () => {
         showNotify({
           type: "success",
-          message: "Downloading"
+          message: "Download Completed"
         })
         close(_conn)
       });
