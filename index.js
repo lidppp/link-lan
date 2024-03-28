@@ -55,6 +55,6 @@ httpServer.listen(port, "0.0.0.0", () => {
   console.log(`sever run in http://${ip}:${port}`)
   console.log(`socket.io run in ws://${ip}:${port}`)
   console.log(`peer.js run in http://${ip}:${peerPort}`)
-  console.log(`\n\nOpen "http://${ip}:${port}" in your browser`)
+  console.log(`\nOpen "http://${ip}:${port}" in your browser`)
 })
 
