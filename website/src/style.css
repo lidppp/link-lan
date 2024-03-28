@@ -1,0 +1,18 @@
+html,body, #app{
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+    background: black;
+    color: white;
+}
+
+.tempDownLink{
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}
