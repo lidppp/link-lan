@@ -27,7 +27,7 @@
     "update": "cd website && npm run build",
     "start": "npm run run",
     "dev": "nodemon --delay 2.5s --exec 'npm run start'",
-    "publish": "npm publish ."
+    "pbls": "npm publish ."
   },
   "dependencies": {
     "@multiavatar/multiavatar": "^1.0.7",
