@@ -28,7 +28,7 @@ This software is built using web technologies and Node.js. You only need a compu
 
    ```bash
    npm install
-   # 或者使用yarn(推荐)
+   # Or using yarn (recommended)
    yarn install
    ```
 
