@@ -6,8 +6,8 @@
 
     <div class="flex items-center gap-10px pt15px pb30px sticky top-0 bg-white z1 rounded-16px">
       <input type="text" class="border-b px-15px lh-34px flex-grow" placeholder="Input Transfer text" v-model="msg" @keyup.enter="add">
-      <van-icon class="px10px hover:text-green transition-all-300 cursor-pointer" size="22" name="add-o" @click="add"/>
-      <van-icon class="px10px hover:text-blue transition-all-300 cursor-pointer" size="20" name="replay"
+      <Icon class="px10px hover:text-green transition-all-300 cursor-pointer" size="22" name="add-o" @click="add"/>
+      <Icon class="px10px hover:text-blue transition-all-300 cursor-pointer" size="20" name="replay"
                 @click="reload"/>
     </div>
 
@@ -19,13 +19,13 @@
       <div class="items" @click="copyFn(item)" v-for="item in list" :key="item.key">
         <div class="flex-grow">{{ item.msg }}</div>
         <div class="flex-shrink-0 px-15px hover:text-red transition-all-300" @click.stop="del(item)">
-          <van-icon name="delete-o"/>
+          <Icon name="delete-o"/>
         </div>
       </div>
     </template>
     
     <div class="sticky bottom-0 p20px bg-#fff flex items-center justify-end text-#777 hover:text-black active:text-black transition-all-300 rounded-16px">
-      <router-link to="/file">Go To Transfer File<van-icon class="rotate--90deg ml-10px" name="down" /></router-link>
+      <router-link to="/file">Go To Transfer File<Icon class="rotate--90deg ml-10px" name="down" /></router-link>
       
     </div>
 
@@ -36,7 +36,7 @@
 import {getMessage, addMessage, delMessage} from "@/api/message.js";
 import {ref, onMounted} from "vue"
 import copy from 'copy-to-clipboard';
-import {showNotify} from "vant";
+import {showNotify, Icon} from "vant";
 
 const list = ref([])
 const msg = ref("")

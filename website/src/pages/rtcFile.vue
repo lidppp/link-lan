@@ -11,7 +11,7 @@
         <div class="avatar w60px h60px" :style="getAvatar(myPeerId)"></div>
         <div class="max-w-40% truncate">{{ myPeerId }}</div>
         <label for="up" @click.stop="()=>{}">
-          <van-icon class="px10px hover:text-teal-500 transition-all-300 cursor-pointer rotate--90deg" size="22"
+          <Icon class="px10px hover:text-teal-500 transition-all-300 cursor-pointer rotate--90deg" size="22"
                     name="exchange"/>
           <input type="file" id="up" hidden="hidden" ref="file" @change="fileChange">
         </label>
@@ -35,7 +35,7 @@
             <div class="max-w-40% truncate">{{ openFilesData.peerId }}</div>
           </div>
           
-          <van-icon class="p10px rounded-full hover:text-amber transition-all-300 cursor-pointer justify-self-end"
+          <Icon class="p10px rounded-full hover:text-amber transition-all-300 cursor-pointer justify-self-end"
                     style="box-shadow: 0 6px 16px -8px #00000014, 0 9px 28px #0000000d, 0 12px 48px 16px #00000008;"
                     size="22" name="arrow-up" @click="openFiles=false"/>
         </div>
@@ -61,7 +61,7 @@
     <div
       class="sticky bottom-0 p20px bg-#fff flex items-center justify-end text-#777 hover:text-black active:text-black transition-all-300 rounded-16px">
       <router-link to="/">Go To Transfer Text
-        <van-icon class="rotate--90deg ml-10px" name="down"/>
+        <Icon class="rotate--90deg ml-10px" name="down"/>
       </router-link>
     
     </div>
@@ -77,7 +77,7 @@ import {downloadFile, readableBytes} from "../utils/index.js";
 import io from "socket.io-client"
 import Peer from "peerjs";
 import http from "@/utils/http.js";
-import {showNotify} from "vant";
+import {showNotify, Icon} from "vant";
 
 const userList = ref({}) // 全部用户列表
 const outputUserList = computed(()=>{

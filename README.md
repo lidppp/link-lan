@@ -10,6 +10,21 @@ This software is built using web technologies and Node.js. You only need a compu
 >
 > Before using, make sure to test network connectivity between host and target machines using the ping command.
 
+
+### How to Use
+```bash
+npm install -g link-lan
+
+linklan
+````
+#### Command Line Arguments
+| Argument | 	Optional Values | 	Meaning              |
+|----------|------------------|-----------------------|
+| -h	      | -	               | Get help information  |
+| -f	      | -	               | Force rebuild website |
+| -p	      | 80~65534         | Specify running port  |
+
+
 ### Quick Start
 
 1. Clone the project:
@@ -30,13 +45,6 @@ This software is built using web technologies and Node.js. You only need a compu
    npm install
    # Or using yarn (recommended)
    yarn install
-   ```
-   
-   If you want to use it in the command line from any folder:
-   ```bash
-   yarn link link-lan
-   # Usage: Execute the following command
-   linklan
    ```
 
 4. Start the server:

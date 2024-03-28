@@ -1,14 +1,18 @@
 import sqlite3 from "sqlite3"
 import fs from "fs"
 import path from "node:path";
+import {fileExists} from "./index.js";
+import {fileURLToPath} from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function initDB() {
   const sql3 = sqlite3.verbose()
-  if (!fs.existsSync(path.resolve("./data"))) {
-    fs.mkdirSync("./data")
+  if (!fileExists(path.resolve(__dirname,"../data"))) {
+    fs.mkdirSync(path.resolve(__dirname,"../data"))
   }
   const db = new sql3.Database(
-      './data/msg.db',
+      path.resolve(__dirname, '../data/msg.db'),
       function (err) {
         if (err) {
           return console.error(err.message)
