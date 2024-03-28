@@ -1,4 +1,7 @@
 ## LinkLAN
+  
+[中文](./README-zh.md)  
+  
 Do you ever find yourself in a situation where you urgently need to transfer text or files but can't access messaging apps like WeChat or QQ? Look no further! Try out this browser-based "File Transfer Assistant" that operates within your local network.
 
 This software is built using web technologies and Node.js. You only need a computer with Node.js installed to host your own file transfer assistant within your local network. Moreover, there's no need to download any additional software; you can experience all the features directly in your browser.
@@ -21,7 +24,7 @@ This software is built using web technologies and Node.js. You only need a compu
    cd link-lan
    ```
 
-3. 安装依赖
+3. Install dependencies:
 
    ```bash
    npm install
@@ -29,7 +32,7 @@ This software is built using web technologies and Node.js. You only need a compu
    yarn install
    ```
 
-4. Install dependencies:
+4. Start the server:
 
    ```bash
    npm run start
