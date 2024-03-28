@@ -5,11 +5,16 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import {VantResolver} from '@vant/auto-import-resolver';
 import UnoCSS from 'unocss/vite'
+import {fileURLToPath} from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
+	root: __dirname,
 	plugins: [
-		vue(),
     UnoCSS(),
+		vue(),
 		AutoImport({
 			resolvers: [VantResolver()],
 		}),

@@ -34,13 +34,6 @@ app.use(router)
 
 createIO(httpServer, peerPort)
 
-PeerServer({
-  port: peerPort,
-  path: "/peer",
-  cors: {
-    origin: "*",
-  }
-});
 
 app.get("/api/getPeerPort", function (req, res) {
   res.send(ResultMessage.success({peerPort}))
@@ -50,10 +43,18 @@ app.get(/.*/, function (req, res) {
   res.sendFile(path.join(__dirname, './dist/index.html'))
 })
 
+PeerServer({
+  port: peerPort,
+  path: "/peer",
+  cors: {
+    origin: "*",
+  }
+});
 
 httpServer.listen(port, "0.0.0.0", () => {
   console.log(`sever run in http://${ip}:${port}`)
   console.log(`socket.io run in ws://${ip}:${port}`)
   console.log(`peer.js run in http://${ip}:${peerPort}`)
+  console.log(`\n\nOpen "http://${ip}:${port}" in your browser`)
 })
 

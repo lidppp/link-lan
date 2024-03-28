@@ -33,7 +33,14 @@
    # 或者使用yarn(推荐)
    yarn install
    ```
-
+   
+   如果你想在任意文件夹下的命令行中使用:  
+   ```bash
+   yarn link link-lan
+   # 使用: 执行以下命令
+   linklan
+   ```
+   
 4. 启动服务
 
    ```bash

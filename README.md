@@ -31,6 +31,13 @@ This software is built using web technologies and Node.js. You only need a compu
    # Or using yarn (recommended)
    yarn install
    ```
+   
+   If you want to use it in the command line from any folder:
+   ```bash
+   yarn link link-lan
+   # Usage: Execute the following command
+   linklan
+   ```
 
 4. Start the server:
 
