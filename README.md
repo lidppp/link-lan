@@ -49,17 +49,17 @@ This software is built using web technologies and Node.js. You only need a compu
 
 Click on a message to copy it.
 
-![image-20240327181125615](/Users/lixin/study/LANInfoTranport/assets/image-20240327181125615.png)
+![assets/image-20240327181125615](/Users/lixin/study/LANInfoTranport/assets/image-20240327181125615.png)
 
 #### File Transfer
 
 Click on the avatar to view shared files. Click the `↓↑` button to upload files.
 
-![image-20240327181240359](/Users/lixin/study/LANInfoTranport/assets/image-20240327181240359.png)
+![assets/image-20240327181240359](/Users/lixin/study/LANInfoTranport/assets/image-20240327181240359.png)
 
 Click on a file row to download the file.
 
-![image-20240327181306599](/Users/lixin/study/LANInfoTranport/assets/image-20240327181306599.png)
+![assets/image-20240327181306599](/Users/lixin/study/LANInfoTranport/assets/image-20240327181306599.png)
 
 ### Technology Stack
 

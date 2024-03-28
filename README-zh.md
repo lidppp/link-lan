@@ -54,17 +54,17 @@
 
 点击行复制文本
 
-![image-20240327181125615](/Users/lixin/study/LANInfoTranport/assets/image-20240327181125615.png)
+![assets/image-20240327181125615](/Users/lixin/study/LANInfoTranport/assets/image-20240327181125615.png)
 
 #### 文件传输
 
 点击头像查看对方/自己分享的文件, 点击`↓↑`按钮上传文件
 
-![image-20240327181240359](/Users/lixin/study/LANInfoTranport/assets/image-20240327181240359.png)
+![assets/image-20240327181240359](/Users/lixin/study/LANInfoTranport/assets/image-20240327181240359.png)
 
 点击文件所在行下载文件
 
-![image-20240327181306599](/Users/lixin/study/LANInfoTranport/assets/image-20240327181306599.png)
+![assets/image-20240327181306599](/Users/lixin/study/LANInfoTranport/assets/image-20240327181306599.png)
 
 ### 技术栈
 
