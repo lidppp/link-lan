@@ -5,7 +5,7 @@ const router = Express.Router()
 
 router.route("/api/message")
     .get((req, res)=>{
-      sqlGet(`SELECT id,msg,create_time FROM message`).then((sqlRes)=>{
+      sqlGet(`SELECT id,msg,create_time FROM message ORDER BY create_time DESC`).then((sqlRes)=>{
         res.send(ResultMessage.success(sqlRes))
       }).catch(err=>{
         res.send(ResultMessage.error(err.message))
@@ -28,15 +28,5 @@ router.route("/api/message")
       })
     })
 
-router.route("/api/file")
-    .get((req, res)=>{
-      res.send("file get")
-    })
-    .post((req,res)=>{
-      res.send("file post")
-    })
-    .delete((req, res)=>{
-      res.send("file delete")
-    })
 
 export default router

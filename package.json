@@ -19,6 +19,8 @@
     "connect-history-api-fallback": "^2.0.0",
     "copy-to-clipboard": "^3.3.3",
     "express": "^4.19.1",
+    "overlayscrollbars": "^2.6.1",
+    "overlayscrollbars-vue": "^0.5.8",
     "peer": "^1.0.2",
     "peerjs": "^1.5.2",
     "socket.io": "^4.7.5",
@@ -43,6 +45,11 @@
     "linklan": "run.js"
   },
   "nodemonConfig": {
-    "ignore": ["dist/*", "data/*", "data/*", "node_modules/*"]
+    "ignore": [
+      "dist/*",
+      "data/*",
+      "data/*",
+      "node_modules/*"
+    ]
   }
 }
