@@ -1,6 +1,6 @@
 {
   "name": "link-lan",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "author": "lidppp",
   "description": "Text and file transfer within a local area network.",
@@ -42,7 +42,6 @@
     "copy-to-clipboard": "^3.3.3",
     "express": "^4.19.1",
     "global": "^4.4.0",
-    "link-lan": "^1.0.2",
     "overlayscrollbars": "^2.6.1",
     "overlayscrollbars-vue": "^0.5.8",
     "peer": "^1.0.2",
